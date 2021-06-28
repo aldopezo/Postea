@@ -13,15 +13,15 @@ class CreateUsuariosTable extends Migration
      */
     public function up()
     {
-        Schema::table('usuarios', function (Blueprint $table) {
-            $table->increments('user_id');
-            $table->string('title', 255);
-            $table->string('artist_group', 255);
-            $table->timestamps('release_date', 255);
-            $table->int('track');
-            $table->image('cover');
+        //Schema::table('usuarios', function (Blueprint $table) {
+        //    $table->increments('user_id');
+        //    $table->string('title', 255);
+        //    $table->string('artist_group', 255);
+        //    $table->timestamps('release_date', 255);
+        //    $table->int('track');
+        //    $table->image('cover');
 
-        });
+        //});
     }
 
     /**
@@ -31,8 +31,9 @@ class CreateUsuariosTable extends Migration
      */
     public function down()
     {
-        Schema::table('usuarios', function (Blueprint $table) {
+        Schema::dropIfExists('users');
+        //Schema::table('usuarios', function (Blueprint $table) {
             //
-        });
+        //});
     }
 }

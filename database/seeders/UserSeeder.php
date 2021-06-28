@@ -17,8 +17,8 @@ class UserSeeder extends Seeder
             DB::table('usuarios')->insert(array(
                 'nombre' => 'Juan ', 'Pedro ', 'Rodrigo ', 'Enrique ', 'Paola ', 'Carlos ', 'Aldo ', 'Valeria ', 'Gabriela ', 'Luis ', 'Franco '.$i,
                 'cancion' => 'ss ', 'sd ', 'rr ', 'oo ', 'ww ', 'se ', 'csa ', 'vfd ', 'ss ', 'lo'.$i,
-            ))
+            ));
         }
-        $this->command->info('La tabla esta llenandose')
+        $this->command->info('La tabla esta llenandose');
     }
 }

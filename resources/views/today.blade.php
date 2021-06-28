@@ -1,17 +1,20 @@
-<?php
+@extends('layouts.app')
 
-namespace App\Models;
+@section('content')
 
-use GuzzleHttp\Psr7\Request;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Jenssegers\Mongodb\Eloquent\Model;
-
-
-class Post extends Model
-{
-    use HasFactory;
-    
-    protected $fillable = [
-        'title', 'image', 'content' 
-    ];  
-}
+<div class="container-fluid">
+    @foreach ($posts as $post)
+    <div class="row align-items-center h-100">
+        <div class="card col-md-8 mx-auto">
+            <div class="card-body ">
+                <h5 class="card-title">
+                    <a href="{{ url('/posts/' . $post->id) }}">
+                        {{ $post->title }}
+                    </a>
+                </h5>
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>    
+@endsection
